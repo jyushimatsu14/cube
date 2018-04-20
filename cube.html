@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>cube</title>
+    <style type="text/css">
+        .cube{
+            margin:100px;
+            width: 300px;
+            height: 300px;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateY(0deg) ;
+            transition: all 3s;
+        }
+        .cube:hover {
+            transform: rotateY(75deg) rotateX(100deg) rotateZ(-75deg);
+        }
+        .face{ 
+            position: absolute;
+            opacity: 0.7;
+            transform-style: preserve-3d;
+            perspective: 800px;
+            width: 300px;
+            height: 300px;
+            font-size: 30px;
+            line-height: 300px;
+            text-align: center;
+        }
+        .back{
+            transform: rotateY(180deg) translate3d(0,0,150px);
+            background-color: violet;
+        }
+        .right{
+            transform: rotateY(90deg) translate3d(0,0,150px);
+            background-color: lightblue ;
+        }
+        .left{
+            transform: rotateY(-90deg) translate3d(0,0,150px);
+            background-color: yellow;
+        }		
+        .top{
+            transform: rotateX(90deg) translate3d(0,0,150px);
+            background-color: lightgreen;
+        }
+        .bottom{
+            transform: rotateX(-90deg) translate3d(0,0,150px);
+            background-color: red;
+        }
+        .front{
+            transform: translate3d(0,0,150px);
+            background-color: pink;
+        }
+        
+    </style>
+</head>
+<body>
+<div class="a">
+    <div class="cube">
+        <div class="face front">front</div>
+        <div class="face back">back</div>
+        <div class="face left">left</div>
+        <div class="face right">right</div>
+        <div class="face top">top</div>
+        <div class="face bottom">bottom</div>
+    </div>
+</div>
+</body>
+</html>
